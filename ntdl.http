@@ -1,0 +1,21 @@
+# fetch all taks
+
+GET http://localhost:3002/ntdl/tasks
+
+
+###
+POST http://localhost:3002/ntdl/tasks
+Content-Type: application/json
+
+{
+   
+    "task":"New Task",
+    "hour":2000,
+    "type": "good"
+}
+
+
+##
+
+DELETE http://localhost:3002/ntdl/tasks
+
