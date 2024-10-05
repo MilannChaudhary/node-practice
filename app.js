@@ -202,6 +202,27 @@ app.delete("/ntdl/tasks/:id", (req, res) => {
     res.status(500).send(errorobj);
   }
 });
+// app.delete("/ntdl/tasks/:id", (req, res) => {
+//   try {
+//     const id = req.params.id;
+//     const data = fs.readFileSync(taskData);
+//     const taskList = JSON.parse(data);
+//     const filterTaskList = taskList.filter((task) => (task.id |= id));
+//     const output = fs.writeFileSync(taskData, JSON.stringify(filterTaskList));
+//     const successobj = {
+//       status: "success",
+//       message: "Task " + id + " deleted!",
+//     };
+//     res.status(200).send(successobj);
+//   } catch (error) {
+//     const errorobj = {
+//       status: "error",
+//       message: "Error deleting task",
+//     };
+
+//     res.status(500).send(errorobj);
+//   }
+// });
 
 app.listen(Port, (error) => {
   error ? console.log("Error is servving") : console.log("http://localhost:" + Port + " started");
