@@ -92,16 +92,16 @@ app.post("/login", (request, response) => {
 //   response.send(`${orderData.name}`);
 // });
 
-// app.get("/addNumber", (request, response) => {
-//   try {
-//     let number1 = parseInt(request.query.number1);
-//     let number2 = parseInt(request.query.number2);
-//     response.send(`${number1 + number2}`);
-//   } catch (err) {
-//     console.log(err.message);
-//     response.send(err.message);
-//   }
-// });
+app.get("/addNumber", (request, response) => {
+  try {
+    let number1 = parseInt(request.query.number1);
+    let number2 = parseInt(request.query.number2);
+    response.send(`${number1 + number2}`);
+  } catch (err) {
+    console.log(err.message);
+    response.send(err.message);
+  }
+});
 
 // app.get("/user/getOrderList", (request, response) => {
 //   // get list of orders from DatabaseSync
